@@ -1,0 +1,151 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "beer": [
+    {
+      "id": 1,
+      "company": "Weihenstephaner",
+      "strength": 5.4,
+      "description": "The World's oldest Brewery",
+      "countryOfOrigin": "Deutschland",
+      "style": "Hefe Weissbier",
+      "ingredients": "Water, wheat malt, barley malt, hops, yeast.",
+      "bestBeforeDate": "17.09.19",
+      "size": 500,
+      "colourOfBottle": "brown",
+      "rating":"5"
+    },
+    {
+      "id": 2,
+      "company": "Spaten-Franziskaner-Bräu",
+      "strength": 5.9,
+      "description": "Spaten’s Oktoberfestbier pours a sparkling deep golden colour with a huge fluffy head. Soft caramel and bready malts are accompanied by grassy hops in this clean and crisp beer that was introduced in 1872. It's a terrific seasonal Oktoberfestbier.",
+      "countryOfOrigin": "Deutschland",
+      "style": "Oktoberfestbier",
+      "ingredients": "Water, wheat malt, barley malt, hops, yeast.",
+      "bestBeforeDate": "17.09.19",
+      "size": 500,
+      "colourOfBottle": "brown",
+      "rating":"3.8"
+    },
+    {
+      "id": 3,
+      "company": "Maisel' Weisse",
+      "strength": 5.4,
+      "description": "The Maisel’s Weisse Original is a refreshing hefeweizen that is brewed in accordance with the Bavarian wheat ale traditions. The Brauerei Maisel is a prominent regional brewery in Franconia and has been brewing solid examples of the local style since 1886.",
+      "countryOfOrigin": "Deutschland",
+      "style": "Wheat Beer",
+      "ingredients": "Water, wheat malt, barley malt, hops, yeast.",
+      "bestBeforeDate": "17.09.19",
+      "size": 500,
+      "colourOfBottle": "brown",
+      "rating":"3.5"
+    },
+    {
+      "id": 4,
+      "company": "Schneider Aventinus (Tap 6)",
+      "strength": 8.2,
+      "description": "The Schneider Weisse Brewery has been in existence since 1607 making it the oldest wheat beer brewery in Bavaria. Since receiving the exclusive rights from King Ludwig II in 1872 to brew wheat beers, the Schneider family has been setting the standard with beers like the Schneider Unser Aventinus Tap 6 Wheat Doppelbock.",
+      "countryOfOrigin": "Deutschland",
+      "style": "Wheat Beer",
+      "ingredients": "Water, wheat malt, barley malt, hops, yeast.",
+      "bestBeforeDate": "17.09.19",
+      "size": 500,
+      "colourOfBottle": "brown",
+      "rating":"5"
+    },
+    {
+      "id": 5,
+      "company": "Paulaner Hefe Weisbier",
+      "strength": 5.5,
+      "description": "Fine palates perceive trace of mango and pineapple and the balance between sweet and bitter. Overall, beer connoisseurs appreciate the incomparable flavor of Paulaner Hefe-Weizen for its perfectly balanced mix of aromas and refreshing taste. It's a superb beergarden or outdoor drinking bier.",
+      "countryOfOrigin": "Deutschland",
+      "style": "Wheat Beer",
+      "ingredients": "Water, wheat malt, barley malt, hops, yeast.",
+      "bestBeforeDate": "17.09.19",
+      "size": 500,
+      "colourOfBottle": "brown",
+      "rating":"4.5"
+    },
+    {
+      "id": 6,
+      "company": "Chimay Blue",
+      "strength": 9,
+      "description": "Bearing the mark of an Authentic Trappist Product, the Chimay Blue Strong Dark Ale is world-class Belgian elegance in a bottle. This authentic Belgian beer is complex, rich and powerful--all of which improve and transform over many years thanks to its classic bottle-conditioning.",
+      "countryOfOrigin": "Belgium",
+      "style": "Abbey Beer",
+      "ingredients": "Water, wheat malt, barley malt, hops, yeast.",
+      "bestBeforeDate": "17.09.19",
+      "size": 500,
+      "colourOfBottle": "brown",
+      "rating":"4.9"
+    },
+    {
+      "id": 7,
+      "company": "La Chouffe",
+      "strength": 8,
+      "description": "La Chouffe has a quintessentially Belgian character, with spiced, bready notes, coriander and a touch of lemon. Hazy gold and unfiltered, its light refreshing nature masks a robust 8% ABV. Brasserie d'Achouffe is named after the Chouffe gnomes rumoured to live in the Ardennes mountains. According to legend, the magical gnomes ran their own brewery in the hills for many years until disaster struck and the brewery was destroyed. The story goes that one of these little brewers visited the founders of Brasserie d'Achouffe and gave them the recipe for the beer which would henceforth be known as La Chouffe. You've heard of home brew, but have you ever tried gnome brew?! La Chouffe won a Silver Medal at the World Beer Awards 2016 in the category Belgium - Belgian Style Tripel.",
+      "countryOfOrigin": "Belgium",
+      "style": "Pale Ale",
+      "ingredients": "Water, wheat malt, barley malt, hops, yeast.",
+      "bestBeforeDate": "17.09.19",
+      "size": 330,
+      "colourOfBottle": "brown",
+      "rating":"5"
+    },
+    {
+      "id": 8,
+      "company": "Westmalle Dubbel",
+      "strength": 7,
+      "description": "Another outstanding Trappist beer, the Westmalle Dubbel is rich and complex thanks to its secondary fermentation in the bottle. This dark brown Belgian dubbel has beautiful ruby undertones with a creamy, fragrant head. Aromas of dark fruits, bread, and subtle spices lead the way for flavours of raisins and other dark fruits and a fresh bitter finish that lingers long and dry. The Trappist Abbey of Westmalle, near Antwerp, has been brewing beer for over 150 years. One of only 10 breweries in the world permitted to carry the Authentic Trappist Product label, it is regarded as being responsible for the increasing popularity of Trappist beers.",
+      "countryOfOrigin": "Belgium",
+      "style": "Abbey Beer",
+      "ingredients": "Water, wheat malt, barley malt, hops, yeast.",
+      "bestBeforeDate": "17.09.19",
+      "size": 330,
+      "colourOfBottle": "brown",
+      "rating":"5"
+    },
+    {
+      "id": 9,
+      "company": "Delirium Tremens",
+      "strength": 8.5,
+      "description": "Named for “the shakes” that one gets after a heavy night of drinking, Delirium Tremens Belgian Strong Ale will probably do just that. Producing this beer requires three different yeast cultures and the result is intense flavours of honey, spice, pears, apricot, golden raisin and subtle citrus alongside rather complex aromas. Pair a dry finish with a solid bitterness from both Saaz and Styrian hops and this nicely-balanced beer is one you’d want to drink again and again.",
+      "countryOfOrigin": "Belgium",
+      "style": "Strong Ale",
+      "ingredients": "Water, wheat malt, barley malt, hops, yeast.",
+      "bestBeforeDate": "17.09.19",
+      "size": 330,
+      "colourOfBottle": "brown",
+      "rating":"5"
+    },
+    {
+      "id": 10,
+      "company": "Saison Dupont",
+      "strength": 6.5,
+      "description": "The refreshing, thirst-quenching saison was created for field workers—known as “saisoniers”—to enjoy whilst working during the hot summer months. Since 1844, Saison Dupont has been setting the standard for Belgian saisons and is internationally renowned for being the best-of-the-best and a perfect accompaniment to food. This quintessential saison is best described as being lively, zesty and very refreshing. A bubbly carbonation gives this straw-coloured beer a dense head whilst carrying the aromas of bread, citrus, spice and hops to your nose. Bold bitterness with zesty hops and citrus are complemented by a solid malty sweetness. A long, dry finish transforms this beer into the unbelievably drinkable beer it was created to be.\n",
+      "countryOfOrigin": "Belgium",
+      "style": "Season Beer",
+      "ingredients": "Water, wheat malt, barley malt, hops, yeast.",
+      "bestBeforeDate": "17.09.19",
+      "size": 330,
+      "colourOfBottle": "brown",
+      "rating":"4.8"
+    }
+  ]  
+}

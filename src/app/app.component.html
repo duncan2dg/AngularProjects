@@ -1,0 +1,69 @@
+
+<button (click)="getBeerData()">Get Beer Selection</button>
+
+<h1>Beers</h1>
+<div onload="loadBeerCountries()">
+    <!--FILTER RESULTS
+    <div>
+            <select onload="loadBeerCountries()" class="form-control" 
+            id="country" 
+            required [(ngModel)]="model.country" 
+            name="country" 
+            #title="ngModel">
+            <option *ngFor="let country of outputBeers" 
+            [value]="country">{{country.countryOfOrigin}}</option>
+          </select>
+    </div>
+-->
+
+    <!--Display Results-->
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <td scope="col" hidden>Id</td>
+            <th scope="col">Company</th>
+            <th scope="col">Description</th>
+            <th scope="col">Country</th>
+            <th scope="col">Style</th>
+            <th scope="col">Strength</th>
+            <th scope="col">Ingredients</th>
+            <th scope="col">Bottle colour</th>
+            <td scope="col">Rating</td>
+            <td scope="col">&nbsp;</td>
+        </tr>
+    </thead>
+
+    
+
+    <tbody></tbody>
+        <tr *ngFor="let beer of outputBeers">
+            <td hidden>{{beer.id}}</td>
+            <!--
+            <td>
+                <input type="text" 
+                class=""
+                id="company"
+                required
+                [(ngModel)]="beer.company"
+                name="company"
+                #description="ngModel">
+                
+                
+
+                </td>-->
+            <td>{{beer.company}}</td>    
+            <td>{{beer.description}}</td>
+            <td>{{beer.countryOfOrigin}}</td>
+            <td>{{beer.Style}}</td>
+            <td>{{beer.strength}}</td>
+            <td>{{beer.ingredients}}</td>
+            <td>{{beer.colourOfBottle}}</td>
+            <td>{{beer.rating}}</td>
+            <td><button (click)="editBeerSelection(beer)">Edit</button></td>
+        </tr>
+    </tbody>
+</table>
+
+</div>
+
+
