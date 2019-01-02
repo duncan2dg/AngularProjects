@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Config } from 'protractor';
 import { beers } from './beers';
@@ -19,27 +19,66 @@ import { beers } from './beers';
 })
 export class AppComponent {
     outputBeers: beers[];
-    private _baseUrl= 'http://localhost:3000/beer';
+    private _apiUrl= 'http://localhost:3000/beer';
   
 
 
     getBeersConfig(){
-      return this.http.get<beers[]>(this._baseUrl);
+      return this.http.get<beers[]>(this._apiUrl);
     }
   
     
   
     constructor(private http: HttpClient){}
+    //@ViewChild('div') loadbeercompanies: ElementRef 
+    //@ViewChild('select') loadbeercompanies: ElementRef 
+        
+    //ngAfterViewInit(){
+      //this.loadBeerCompanies();
+    //}
 
-    loadBeerCountries(){
+
+    //companies: beers[];
+    /******************
+     * POPULATE DDLIST
+     ****************
+    loadBeerCompanies(){
       return this.getBeersConfig()
       .subscribe(data => {
         console.log(data);
-        this.outputBeers = data;
+        this.companies = data;
       })
-    }
-    
+    }*/
 
+    /*
+    public ngOnInit(){
+      //console.log("WASSUP" + this.loadBeerCompanies());
+      return this.loadBeerCompanies();
+    }*/
+
+
+
+    /**************************
+     * GET BEER COMPANY FROM DDLIST
+     *************************/
+    //selectCompany(value: any){
+       //console.log("Chosen this: " + value);
+      //return this.getBeersConfig()
+      //.subscribe(value => {
+        //this.outputBeers = value;
+        //console.log(value);
+      //})
+    //}
+
+
+
+    /******************************
+     * LOAD DATA GRID -ALL RESULTS
+     ******************************/
+
+    //@ViewChild('div') loadDataGrid: ElementRef 
+    setGridVisibility: boolean = false;
+    //setGridDDLVisibility: boolean = false;
       getBeerData(){
         return this.getBeersConfig()
         .subscribe(data => {
@@ -49,9 +88,13 @@ export class AppComponent {
           //console.log("ingredients: £" + data[0].ingredients);
           //console.log("country: " + data[0].countryOfOrigin);
           this.outputBeers = data;
+          this.setGridVisibility = true;
         })
+        
       }
-
+    clearGrid(){
+      this.setGridVisibility = false;
+    }
     editBeerSelection(selectedItem: any){
       //var beerNo: number;
       //beerNo = this.outputBeers[0].id;

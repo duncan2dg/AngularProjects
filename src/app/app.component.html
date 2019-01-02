@@ -1,9 +1,9 @@
 
 <button (click)="getBeerData()">Get Beer Selection</button>
-
+<button (click)='clearGrid()'>Clear</button>
 <h1>Beers</h1>
-<div onload="loadBeerCountries()">
-    <!--FILTER RESULTS
+<!--<div onload="loadBeerCountries()">
+    FILTER RESULTS
     <div>
             <select onload="loadBeerCountries()" class="form-control" 
             id="country" 
@@ -14,9 +14,27 @@
             [value]="country">{{country.countryOfOrigin}}</option>
           </select>
     </div>
+
+<div >
+    
+        <select #loadbeercompanies (change)="selectCompany($event.target.value)">
+            <option></option>
+            <option *ngFor="let c of companies" value={{c.company}}>
+                {{c.company}}
+            </option>
+        </select>
+        
+
+    
+    </div>
 -->
+<!--ALTERNATIVE WAY-->
+<app-beer-option [dropDown]="dropDown"></app-beer-option>
+
+<app-beer-grid #dropDown></app-beer-grid>
 
     <!--Display Results-->
+    <div #loadDataGrid [style.visibility]="setGridVisibility ? 'visible' : 'hidden'">
 <table class="table table-striped">
     <thead class="thead-dark">
         <tr>
@@ -63,7 +81,7 @@
         </tr>
     </tbody>
 </table>
-
 </div>
+<!--</div>-->
 
 

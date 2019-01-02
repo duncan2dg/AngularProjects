@@ -6,10 +6,15 @@ import { AppComponent } from './app.component';
 
 import {FormsModule} from '@angular/forms';
 
+import {BeerOptionComponent} from './beer-option-ddl/beer-option.component';
+import {BeerGridComponent} from './beer-grid/beer-grid.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BeerOptionComponent,
+    BeerGridComponent
   ],
   imports: [
     BrowserModule
