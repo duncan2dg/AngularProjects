@@ -1,0 +1,11 @@
+app.component.html //resides in the root
+
+<!--
+    To include these files the must like so it must
+    START with app THEN whatever the filename is called;
+    e.g;
+    beer-option-ddl.component.ts
+    so TAG would be <app-beer-option-ddl>
+-->
+<app-beer-option-ddl></app-beer-option-ddl>
+<app-beer-grid></app-beer-grid>

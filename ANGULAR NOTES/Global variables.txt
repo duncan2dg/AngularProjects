@@ -1,0 +1,38 @@
+/***********************************\
+USING GLOBAL VARIABLS
+\***********************************/
+
+/app/src/shared/app.global.ts
+
+import { Injectable } from '@angular/core';
+
+@Injectable()
+export class AppGlobals {
+    //readonly baseAppUrl: string = 'http://localhost:57431/';
+    //readonly baseAPIUrl: string = 'https://api.github.com/';
+    readonly _apiUrl= 'http://localhost:3000/beers';
+}
+
+
+//ADD TO app.component.ts
+
+import { AppGlobals { from './shared/app.global';
+
+@Component({
+providers: [ AppGlobals ];
+});
+
+Export class (private http: HttpClient, private _global: AppGlobals){
+
+
+//should really put this in a service
+getBeerConfig(){
+return this.http.get<beers[]>(this._global._apiUrl);
+}
+
+}
+
+
+
+//CALLING EXAMPLE
+
