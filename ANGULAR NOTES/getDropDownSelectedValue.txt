@@ -1,0 +1,73 @@
+  /**************************
+   * GET BEER COMPANY FROM DDLIST
+	AND DISPLAY IN GRID
+   *************************/
+.html
+<div>Select a beer company:
+    <select #loadbeercompanies id="beerCompanies">
+            <option></option>
+            <option *ngFor="let c of companies" value={{c.company}}>
+                {{c.company}}
+            </option>
+        </select>
+
+        <button (click)="getResults()">Get results</button>
+        {{ queriedBeerData | json }}
+<button (click)="clearSearch()">Clear</button>
+
+    </div>
+
+    <div id="selectedResultsGrid" [style.visibility]="isGridVisible ? 'visible' : 'hidden'">
+        <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <td scope="col" hidden>Id</td>
+                <th scope="col">Company</th>
+                <th scope="col">Description</th>
+                <th scope="col">Country</th>
+                <th scope="col">Style</th>
+                <th scope="col">Strength</th>
+                <th scope="col">Ingredients</th>
+                <th scope="col">Bottle colour</th>
+                <td scope="col">Rating</td>
+                
+            </tr>
+        </thead>
+        
+        <tbody></tbody>
+            <tr *ngFor="let beer of queriedBeerData">
+                <td hidden>{{beer.id}}</td>
+                <td>{{beer.company}}</td>    
+                <td>{{beer.description}}</td>
+                <td>{{beer.countryOfOrigin}}</td>
+                <td>{{beer.Style}}</td>
+                <td>{{beer.strength}}</td>
+                <td>{{beer.ingredients}}</td>
+                <td>{{beer.colourOfBottle}}</td>
+                <td>{{beer.rating}}</td>
+                
+            </tr>
+        </tbody>
+      </table>
+      </div>
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+.ts
+
+  isGridVisible:boolean = false;
+
+  getResults(){
+    let value = (<HTMLSelectElement>document.getElementById('beerCompanies')).value;
+    this.getBeerDataQuery(value);
+    this.isGridVisible = true;
+  }
+  getBeerDataQuery(selectedCompany:string){
+    return this.getBeersConfig()
+    .subscribe(data => {
+      this.queriedBeerData = data.filter((e) => e.company === selectedCompany);
+    })
+  }
+clearSearch(){
+  this.loadBeerCompanies();
+  this.isGridVisible = false;
+  return true;
+}
